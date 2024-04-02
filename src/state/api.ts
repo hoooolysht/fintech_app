@@ -5,10 +5,11 @@ export  const api = createApi({
         reducerPath: "main",
         tagTypes: ["KPIs"],
         endpoints: (builder) => ({
+            // this is a template for receiving APIs
             getKPIs: builder.query<void, void>({
                 query: () => "kpi/kpis/",
                 providesTags: ["KPIs"],
-            }) // this is a template for receiving APIs
+            }) 
         }),
 });
 // Action Creators
