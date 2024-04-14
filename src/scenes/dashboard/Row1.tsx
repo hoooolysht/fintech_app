@@ -6,6 +6,7 @@ type Props = {}
 
 const Row1 = (props: Props) => {
   const { data } = useGetKPIsQuery();
+  console.log("data:", data);
 
   return (
     <>
