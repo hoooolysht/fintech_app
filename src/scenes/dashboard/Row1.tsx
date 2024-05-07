@@ -154,6 +154,8 @@ const Row1 = () => {
         />
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
+            height={400}
+            width={500}
             data={revenueProfit}
             margin={{
               top: 20,
