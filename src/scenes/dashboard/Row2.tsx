@@ -13,11 +13,10 @@ import {
   YAxis,
 } from "recharts";
 
-type Props = {};
-
-const Row2 = (props: Props) => {
+const Row2 = () => {
   const { palette } = useTheme();
   const { data: operationalData } = useGetKPIsQuery();
+
   const { data: productData } = useGetProductsQuery();
 
   const operationalExpenses = useMemo(() => {
@@ -44,8 +43,6 @@ const Row2 = (props: Props) => {
         />
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
-            width={500}
-            height={400}
             data={operationalExpenses}
             margin={{
               top: 20,
@@ -54,7 +51,6 @@ const Row2 = (props: Props) => {
               bottom: 55,
             }}
           >
-            /* Background mesh*/
             <CartesianGrid vertical={false} stroke={palette.grey[800]} />
             <XAxis
               dataKey="name"
